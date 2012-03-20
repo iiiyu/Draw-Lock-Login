@@ -16,6 +16,8 @@
 		C95FDA141518BE920056BD4A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C95FDA121518BE920056BD4A /* MainStoryboard.storyboard */; };
 		C95FDA171518BE920056BD4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA161518BE920056BD4A /* ViewController.m */; };
 		C95FDA1F1518BEB90056BD4A /* Draw Lock.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA1E1518BEB90056BD4A /* Draw Lock.m */; };
+		C95FDA261518D9D20056BD4A /* dot_off.png in Resources */ = {isa = PBXBuildFile; fileRef = C95FDA241518D9D20056BD4A /* dot_off.png */; };
+		C95FDA271518D9D20056BD4A /* dot_on.png in Resources */ = {isa = PBXBuildFile; fileRef = C95FDA251518D9D20056BD4A /* dot_on.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C95FDA161518BE920056BD4A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C95FDA1D1518BEB90056BD4A /* Draw Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Draw Lock.h"; sourceTree = "<group>"; };
 		C95FDA1E1518BEB90056BD4A /* Draw Lock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Draw Lock.m"; sourceTree = "<group>"; };
+		C95FDA241518D9D20056BD4A /* dot_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_off.png; sourceTree = "<group>"; };
+		C95FDA251518D9D20056BD4A /* dot_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_on.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +84,13 @@
 		C95FDA061518BE920056BD4A /* Draw Lock Login */ = {
 			isa = PBXGroup;
 			children = (
+				C95FDA281518D9D90056BD4A /* image */,
 				C95FDA0F1518BE920056BD4A /* AppDelegate.h */,
 				C95FDA101518BE920056BD4A /* AppDelegate.m */,
 				C95FDA121518BE920056BD4A /* MainStoryboard.storyboard */,
-				C95FDA151518BE920056BD4A /* ViewController.h */,
 				C95FDA1D1518BEB90056BD4A /* Draw Lock.h */,
 				C95FDA1E1518BEB90056BD4A /* Draw Lock.m */,
+				C95FDA151518BE920056BD4A /* ViewController.h */,
 				C95FDA161518BE920056BD4A /* ViewController.m */,
 				C95FDA071518BE920056BD4A /* Supporting Files */,
 			);
@@ -101,6 +106,15 @@
 				C95FDA0E1518BE920056BD4A /* Draw Lock Login-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C95FDA281518D9D90056BD4A /* image */ = {
+			isa = PBXGroup;
+			children = (
+				C95FDA241518D9D20056BD4A /* dot_off.png */,
+				C95FDA251518D9D20056BD4A /* dot_on.png */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +169,8 @@
 			files = (
 				C95FDA0B1518BE920056BD4A /* InfoPlist.strings in Resources */,
 				C95FDA141518BE920056BD4A /* MainStoryboard.storyboard in Resources */,
+				C95FDA261518D9D20056BD4A /* dot_off.png in Resources */,
+				C95FDA271518D9D20056BD4A /* dot_on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
