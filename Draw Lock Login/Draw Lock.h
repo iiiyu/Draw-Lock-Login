@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Draw_Lock : UIView
+@interface Draw_Lock : UIView{
+    NSValue *trackPointValue;
+    NSMutableArray *dotViews;
+    
+}
+
+@property (nonatomic, strong) NSValue *trackPointValue;
+@property (nonatomic, strong) NSMutableArray *dotViews;
+
+
+- (void)clearDotViews;
+- (void)addDotView:(UIView*)view;
+- (void)drawLineFromLastDotTo:(CGPoint)pt;
+- (void)setSubviewImageButton;
 
 @end

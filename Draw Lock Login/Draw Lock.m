@@ -12,10 +12,14 @@
 
 @implementation Draw_Lock
 
+@synthesize trackPointValue = _trackPointValue;
+@synthesize dotViews = _dotViews;
+
 
 -(void)setup
 {
     self.backgroundColor = [UIColor darkGrayColor];
+    //[self setSubviewImageButton];
 }
 
 // 老头说过不直接调用initWithFrame 而是调用awakeFromNib来进行初始化
@@ -33,6 +37,25 @@
         NSLog(@"hello");
     }
     return self;
+}
+
+- (void)clearDotViews
+{
+    [_dotViews removeAllObjects];
+}
+
+- (void)addDotView:(UIView*)view
+{
+    if (!_dotViews) {
+        _dotViews = [NSMutableArray array];
+    }
+    [_dotViews addObject:view];
+}
+
+- (void)drawLineFromLastDotTo:(CGPoint)pt
+{
+    _trackPointValue = [NSValue valueWithCGPoint:pt];
+    [self setNeedsDisplay];
 }
 
 
@@ -100,20 +123,42 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    NSLog(@"i'm begin drawing....");
-    // Drawing code
+    if (!_trackPointValue)
+        return;
     
-    // 获取CGContext，注意UIKit里用的是一个专门的函数
-    //
-    //CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(context, 10.0);
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    CGFloat components[] = {0.5, 0.5, 0.5, 0.8};
+    CGColorRef color = CGColorCreate(colorspace, components);
+    CGContextSetStrokeColorWithColor(context, color);
     
-    // draw background 
-    //[self drawBackgroundAtColor:0.0 atGreen:0.0 atBlue:0.0 atAphla:0.8 inContext:context];
+    CGPoint from;
+    UIView *lastDot;
+    for (UIView *dotView in _dotViews) {
+        from = dotView.center;
+        NSLog(@"drwaing dotview: %@", dotView);
+        NSLog(@"\tdrawing from: %f, %f", from.x, from.y);
+        
+        if (!lastDot)
+            CGContextMoveToPoint(context, from.x, from.y);
+        else
+            CGContextAddLineToPoint(context, from.x, from.y);
+        
+        lastDot = dotView;
+    }
     
-    // 蛋碎了 都想办法画了背景  然后发现view的背景可以这样设置 不过上面的是可以画成透明的
-    // self.backgroundColor = [UIColor darkGrayColor];
-    [self setSubviewImageButton];
+    CGPoint pt = [_trackPointValue CGPointValue];
+    NSLog(@"\t to: %f, %f", pt.x, pt.y);
+    CGContextAddLineToPoint(context, pt.x, pt.y);
     
+    CGContextStrokePath(context);
+    CGColorSpaceRelease(colorspace);
+    CGColorRelease(color);
+    
+    _trackPointValue = nil;
+    NSLog(@"i'm begin drawing line");
+  
     
 }
 
