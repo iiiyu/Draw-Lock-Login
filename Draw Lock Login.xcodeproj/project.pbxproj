@@ -15,6 +15,7 @@
 		C95FDA111518BE920056BD4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA101518BE920056BD4A /* AppDelegate.m */; };
 		C95FDA141518BE920056BD4A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C95FDA121518BE920056BD4A /* MainStoryboard.storyboard */; };
 		C95FDA171518BE920056BD4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA161518BE920056BD4A /* ViewController.m */; };
+		C95FDA1F1518BEB90056BD4A /* Draw Lock.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA1E1518BEB90056BD4A /* Draw Lock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,17 @@
 		C95FDA001518BE920056BD4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C95FDA021518BE920056BD4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C95FDA041518BE920056BD4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C95FDA081518BE920056BD4A /* Draw Lock Login-Info.plist */ = {isa = PBXFileReference; path = "Draw Lock Login-Info.plist"; sourceTree = "<group>"; };
+		C95FDA081518BE920056BD4A /* Draw Lock Login-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Draw Lock Login-Info.plist"; sourceTree = "<group>"; };
 		C95FDA0A1518BE920056BD4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C95FDA0C1518BE920056BD4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C95FDA0E1518BE920056BD4A /* Draw Lock Login-Prefix.pch */ = {isa = PBXFileReference; path = "Draw Lock Login-Prefix.pch"; sourceTree = "<group>"; };
-		C95FDA0F1518BE920056BD4A /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		C95FDA0E1518BE920056BD4A /* Draw Lock Login-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Draw Lock Login-Prefix.pch"; sourceTree = "<group>"; };
+		C95FDA0F1518BE920056BD4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C95FDA101518BE920056BD4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C95FDA131518BE920056BD4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C95FDA151518BE920056BD4A /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		C95FDA151518BE920056BD4A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C95FDA161518BE920056BD4A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C95FDA1D1518BEB90056BD4A /* Draw Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Draw Lock.h"; sourceTree = "<group>"; };
+		C95FDA1E1518BEB90056BD4A /* Draw Lock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Draw Lock.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				C95FDA101518BE920056BD4A /* AppDelegate.m */,
 				C95FDA121518BE920056BD4A /* MainStoryboard.storyboard */,
 				C95FDA151518BE920056BD4A /* ViewController.h */,
+				C95FDA1D1518BEB90056BD4A /* Draw Lock.h */,
+				C95FDA1E1518BEB90056BD4A /* Draw Lock.m */,
 				C95FDA161518BE920056BD4A /* ViewController.m */,
 				C95FDA071518BE920056BD4A /* Supporting Files */,
 			);
@@ -163,6 +168,7 @@
 				C95FDA0D1518BE920056BD4A /* main.m in Sources */,
 				C95FDA111518BE920056BD4A /* AppDelegate.m in Sources */,
 				C95FDA171518BE920056BD4A /* ViewController.m in Sources */,
+				C95FDA1F1518BEB90056BD4A /* Draw Lock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
