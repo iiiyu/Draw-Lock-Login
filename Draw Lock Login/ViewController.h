@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    NSMutableArray  *paths;
+}
+
+@property (nonatomic, strong) NSMutableArray *paths;
+
 
 @end
