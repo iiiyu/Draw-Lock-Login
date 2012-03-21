@@ -49,6 +49,7 @@
     }
     else {
         NSLog(@"%@", self.userName.text);
+        [self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
     }
     //NSString *username = ;
 }

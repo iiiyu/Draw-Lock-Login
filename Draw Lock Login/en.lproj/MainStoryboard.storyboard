@@ -59,7 +59,6 @@
                                 </state>
                                 <connections>
                                     <action selector="enterUserName:" destination="y5v-YN-vOr" eventType="touchUpInside" id="jx0-cI-Jic"/>
-                                    <segue destination="2" kind="push" identifier="Input User Name and go to Lock View" id="9LX-CK-L53"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,6 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="userName" destination="itv-Jy-hxv" id="sju-X3-Jjv"/>
+                        <segue destination="2" kind="modal" identifier="Input User Name and go to Lock View" id="8lx-Wy-01J"/>
                     </connections>
                 </viewController>
             </objects>
