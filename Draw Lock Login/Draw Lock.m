@@ -19,7 +19,7 @@
 -(void)setup
 {
     self.backgroundColor = [UIColor darkGrayColor];
-    //[self setSubviewImageButton];
+    [self setSubviewImageButton];
 }
 
 // 老头说过不直接调用initWithFrame 而是调用awakeFromNib来进行初始化
@@ -34,7 +34,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        NSLog(@"hello");
     }
     return self;
 }

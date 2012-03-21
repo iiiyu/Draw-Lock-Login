@@ -24,8 +24,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    /*
     Draw_Lock *v = (Draw_Lock *)self.view;
         [v setSubviewImageButton];
+     */
    
 }
 
