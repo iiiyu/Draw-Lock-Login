@@ -7,6 +7,7 @@
 //
 
 #import "UserNameViewController.h"
+#import "NSString+AESCrypt.h"
 
 @interface UserNameViewController ()
 
@@ -49,7 +50,33 @@
     }
     else {
         NSLog(@"%@", self.userName.text);
-        [self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
+        /*
+        NSString *key = @"my password";
+        NSString *secret = @"text to encrypt";
+        
+        NSData *plain = [secret dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *cipher = [plain AES256EncryptWithKey:key];
+        printf("%s\n", [[cipher description] UTF8String]);
+        
+        plain = [cipher AES256DecryptWithKey:key];
+        printf("%s\n", [[plain description] UTF8String]);
+        printf("%s\n", [[[NSString alloc] initWithData:plain encoding:NSUTF8StringEncoding] UTF8String]);
+         */
+        
+        NSString *plainString = @"This string will be encrypted";
+        NSString *key = @"YourEncryptionKey"; // should be provided by a user
+        
+        NSLog( @"Original String: %@", plainString );
+        
+        NSString *encryptedString = [plainString AES256EncryptWithKey:key];
+        NSLog( @"Encrypted String: %@", encryptedString );
+        
+        NSLog( @"Decrypted String: %@", [encryptedString AES256DecryptWithKey:key] );
+
+        
+
+         
+        //[self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
     }
     //NSString *username = ;
 }

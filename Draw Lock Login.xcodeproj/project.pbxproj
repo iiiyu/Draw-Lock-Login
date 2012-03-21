@@ -19,6 +19,8 @@
 		C95FDA261518D9D20056BD4A /* dot_off.png in Resources */ = {isa = PBXBuildFile; fileRef = C95FDA241518D9D20056BD4A /* dot_off.png */; };
 		C95FDA271518D9D20056BD4A /* dot_on.png in Resources */ = {isa = PBXBuildFile; fileRef = C95FDA251518D9D20056BD4A /* dot_on.png */; };
 		C95FDA2B151A058D0056BD4A /* UserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA2A151A058D0056BD4A /* UserNameViewController.m */; };
+		C95FDA39151A22660056BD4A /* NSData+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA36151A22650056BD4A /* NSData+AESCrypt.m */; };
+		C95FDA3A151A22660056BD4A /* NSString+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA38151A22660056BD4A /* NSString+AESCrypt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,10 +43,10 @@
 		C95FDA251518D9D20056BD4A /* dot_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_on.png; sourceTree = "<group>"; };
 		C95FDA29151A058D0056BD4A /* UserNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNameViewController.h; sourceTree = "<group>"; };
 		C95FDA2A151A058D0056BD4A /* UserNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNameViewController.m; sourceTree = "<group>"; };
-		C95FDA2C151A1A010056BD4A /* NSData+AESCrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+AESCrypt.h"; sourceTree = "<group>"; };
-		C95FDA2D151A1A010056BD4A /* NSData+AESCrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+AESCrypt.m"; sourceTree = "<group>"; };
-		C95FDA2E151A1A010056BD4A /* NSString+AESCrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+AESCrypt.h"; sourceTree = "<group>"; };
-		C95FDA2F151A1A010056BD4A /* NSString+AESCrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+AESCrypt.m"; sourceTree = "<group>"; };
+		C95FDA35151A22650056BD4A /* NSData+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AESCrypt.h"; sourceTree = "<group>"; };
+		C95FDA36151A22650056BD4A /* NSData+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AESCrypt.m"; sourceTree = "<group>"; };
+		C95FDA37151A22660056BD4A /* NSString+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AESCrypt.h"; sourceTree = "<group>"; };
+		C95FDA38151A22660056BD4A /* NSString+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AESCrypt.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +103,10 @@
 				C95FDA1E1518BEB90056BD4A /* Draw Lock.m */,
 				C95FDA151518BE920056BD4A /* ViewController.h */,
 				C95FDA161518BE920056BD4A /* ViewController.m */,
-				C95FDA2C151A1A010056BD4A /* NSData+AESCrypt.h */,
-				C95FDA2D151A1A010056BD4A /* NSData+AESCrypt.m */,
-				C95FDA2E151A1A010056BD4A /* NSString+AESCrypt.h */,
-				C95FDA2F151A1A010056BD4A /* NSString+AESCrypt.m */,
+				C95FDA35151A22650056BD4A /* NSData+AESCrypt.h */,
+				C95FDA36151A22650056BD4A /* NSData+AESCrypt.m */,
+				C95FDA37151A22660056BD4A /* NSString+AESCrypt.h */,
+				C95FDA38151A22660056BD4A /* NSString+AESCrypt.m */,
 				C95FDA071518BE920056BD4A /* Supporting Files */,
 			);
 			path = "Draw Lock Login";
@@ -199,6 +201,8 @@
 				C95FDA171518BE920056BD4A /* ViewController.m in Sources */,
 				C95FDA1F1518BEB90056BD4A /* Draw Lock.m in Sources */,
 				C95FDA2B151A058D0056BD4A /* UserNameViewController.m in Sources */,
+				C95FDA39151A22660056BD4A /* NSData+AESCrypt.m in Sources */,
+				C95FDA3A151A22660056BD4A /* NSString+AESCrypt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
