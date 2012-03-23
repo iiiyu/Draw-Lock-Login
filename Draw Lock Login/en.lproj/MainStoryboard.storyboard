@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="y5v-YN-vOr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ASP-jE-hzc">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -19,7 +19,7 @@
                     <navigationItem key="navigationItem" id="nhV-jl-WZ8"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="913" y="50"/>
+            <point key="canvasLocation" x="1439" y="50"/>
         </scene>
         <!--User Name View Controller-->
         <scene sceneID="ccs-Ki-YAA">
@@ -27,7 +27,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUh-hT-nxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="y5v-YN-vOr" customClass="UserNameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QEc-Ir-TsK" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Smv-Ls-onm">
@@ -67,11 +67,30 @@
                             <action selector="backgroundTap:" destination="y5v-YN-vOr" eventType="touchDown" id="lhy-ju-e8u"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="81L-gr-qSu"/>
                     <connections>
                         <outlet property="userName" destination="itv-Jy-hxv" id="sju-X3-Jjv"/>
                         <segue destination="2" kind="modal" identifier="Input User Name and go to Lock View" id="8lx-Wy-01J"/>
                     </connections>
                 </viewController>
+            </objects>
+            <point key="canvasLocation" x="932" y="50"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sSY-xn-Ax3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsa-o8-NRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="ASP-jE-hzc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="GKt-Wv-heX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="y5v-YN-vOr" kind="relationship" relationship="rootViewController" id="iaY-VY-QXT"/>
+                    </connections>
+                </navigationController>
             </objects>
             <point key="canvasLocation" x="406" y="50"/>
         </scene>

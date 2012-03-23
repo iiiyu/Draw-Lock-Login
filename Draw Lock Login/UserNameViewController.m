@@ -94,6 +94,19 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    
+    self.user = [ud objectForKey:@"oh my password name"];
+    NSLog(@"%@", self.user);
+    if (self.user == nil) {
+        
+    }
+    else {
+        
+        [self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];        
+    }
     //NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     /*
     UIStoryboard *board = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
@@ -102,9 +115,9 @@
     
     [super viewWillAppear:animated];
      */
-    /*
-    [self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
-     */
+    
+    //[self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
+     
 }
 
 // 完成关闭键盘
