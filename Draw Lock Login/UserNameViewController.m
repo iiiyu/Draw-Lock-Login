@@ -8,13 +8,19 @@
 
 #import "UserNameViewController.h"
 #import "NSString+AESCrypt.h"
+#import "ViewController.h"
 
 @interface UserNameViewController ()
 
 @end
 
 @implementation UserNameViewController
+
 @synthesize userName = _userName;
+
+@synthesize user = _user;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +34,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
+    
+    //[self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
+    /*
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+
+
+    self.user = [ud objectForKey:@"oh my password name"];
+    NSLog(@"%@", self.user);
+    if (self.user == nil) {
+        
+    }
+    else {
+        
+        [self enterUserName:self];
+        
+    }
+     */
+     
+
 }
 
 - (void)viewDidUnload
@@ -38,12 +64,20 @@
     // Release any retained subviews of the main view.
 }
 
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return NO;
 }
 
 - (IBAction)enterUserName:(id)sender {
+    
+    if (self.user) {
+        self.userName.text = self.user;
+        [self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
+    }
+    
     if ([self.userName.text isEqualToString:@""]) {
         UIAlertView *alret = [[UIAlertView alloc] initWithTitle:@"Warrning" message:@"You must input name!!!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         [alret show];
@@ -51,19 +85,26 @@
     else {
         NSLog(@"%@", self.userName.text);
         NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-        
-     //   NSString *string = [NSString stringWithString @"hahaha"];
-        
-       // [ud setObject:self.userName.text forKey:@"myKey"];
-        NSString *value;
-        value = [ud objectForKey:@"myKey"];
-        NSLog(@"%@", value);
-        
+        [ud setObject:self.userName.text forKey:@"oh my password name"];
 
-         
-        //[self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
+        [self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
     }
-    //NSString *username = ;
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    //NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    /*
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    ViewController *vc = [board instantiateViewControllerWithIdentifier:@"ViewController"];
+    [self presentModalViewController:vc animated:NO];
+    
+    [super viewWillAppear:animated];
+     */
+    /*
+    [self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
+     */
 }
 
 // 完成关闭键盘

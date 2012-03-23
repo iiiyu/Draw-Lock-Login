@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserNameViewController : UIViewController
+@interface UserNameViewController : UIViewController{
+    NSString *user;
+}
 
 @property (weak, nonatomic) IBOutlet UITextField *userName;
+
+@property (strong, nonatomic) NSString *user;
 
 - (IBAction)enterUserName:(id)sender;
 
