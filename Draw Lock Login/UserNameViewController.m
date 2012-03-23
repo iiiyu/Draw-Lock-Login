@@ -50,29 +50,14 @@
     }
     else {
         NSLog(@"%@", self.userName.text);
-        /*
-        NSString *key = @"my password";
-        NSString *secret = @"text to encrypt";
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
         
-        NSData *plain = [secret dataUsingEncoding:NSUTF8StringEncoding];
-        NSData *cipher = [plain AES256EncryptWithKey:key];
-        printf("%s\n", [[cipher description] UTF8String]);
+     //   NSString *string = [NSString stringWithString @"hahaha"];
         
-        plain = [cipher AES256DecryptWithKey:key];
-        printf("%s\n", [[plain description] UTF8String]);
-        printf("%s\n", [[[NSString alloc] initWithData:plain encoding:NSUTF8StringEncoding] UTF8String]);
-         */
-        
-        NSString *plainString = @"This string will be encrypted";
-        NSString *key = @"YourEncryptionKey"; // should be provided by a user
-        
-        NSLog( @"Original String: %@", plainString );
-        
-        NSString *encryptedString = [plainString AES256EncryptWithKey:key];
-        NSLog( @"Encrypted String: %@", encryptedString );
-        
-        NSLog( @"Decrypted String: %@", [encryptedString AES256DecryptWithKey:key] );
-
+       // [ud setObject:self.userName.text forKey:@"myKey"];
+        NSString *value;
+        value = [ud objectForKey:@"myKey"];
+        NSLog(@"%@", value);
         
 
          
