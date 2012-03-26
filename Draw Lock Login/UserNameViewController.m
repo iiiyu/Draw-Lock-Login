@@ -37,23 +37,7 @@
     
 	// Do any additional setup after loading the view.
     
-    //[self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
-    /*
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-
-
-    self.user = [ud objectForKey:@"oh my password name"];
-    NSLog(@"%@", self.user);
-    if (self.user == nil) {
-        
-    }
-    else {
-        
-        [self enterUserName:self];
-        
-    }
-     */
-     
+    
 
 }
 
@@ -72,12 +56,12 @@
 }
 
 - (IBAction)enterUserName:(id)sender {
-    
+ /*   
     if (self.user) {
         self.userName.text = self.user;
         [self performSegueWithIdentifier:@"Input User Name and go to Lock View" sender:self];
     }
-    
+   */ 
     if ([self.userName.text isEqualToString:@""]) {
         UIAlertView *alret = [[UIAlertView alloc] initWithTitle:@"Warrning" message:@"You must input name!!!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         [alret show];

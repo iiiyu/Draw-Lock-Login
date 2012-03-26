@@ -21,6 +21,7 @@
 		C95FDA2B151A058D0056BD4A /* UserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA2A151A058D0056BD4A /* UserNameViewController.m */; };
 		C95FDA39151A22660056BD4A /* NSData+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA36151A22650056BD4A /* NSData+AESCrypt.m */; };
 		C95FDA3A151A22660056BD4A /* NSString+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDA38151A22660056BD4A /* NSString+AESCrypt.m */; };
+		C99165F21520A660007005B6 /* AccountInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99165F11520A660007005B6 /* AccountInformationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		C95FDA36151A22650056BD4A /* NSData+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AESCrypt.m"; sourceTree = "<group>"; };
 		C95FDA37151A22660056BD4A /* NSString+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AESCrypt.h"; sourceTree = "<group>"; };
 		C95FDA38151A22660056BD4A /* NSString+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AESCrypt.m"; sourceTree = "<group>"; };
+		C99165F01520A660007005B6 /* AccountInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInformationViewController.h; sourceTree = "<group>"; };
+		C99165F11520A660007005B6 /* AccountInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInformationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				C95FDA1E1518BEB90056BD4A /* Draw Lock.m */,
 				C95FDA151518BE920056BD4A /* ViewController.h */,
 				C95FDA161518BE920056BD4A /* ViewController.m */,
+				C99165F01520A660007005B6 /* AccountInformationViewController.h */,
+				C99165F11520A660007005B6 /* AccountInformationViewController.m */,
 				C95FDA35151A22650056BD4A /* NSData+AESCrypt.h */,
 				C95FDA36151A22650056BD4A /* NSData+AESCrypt.m */,
 				C95FDA37151A22660056BD4A /* NSString+AESCrypt.h */,
@@ -203,6 +208,7 @@
 				C95FDA2B151A058D0056BD4A /* UserNameViewController.m in Sources */,
 				C95FDA39151A22660056BD4A /* NSData+AESCrypt.m in Sources */,
 				C95FDA3A151A22660056BD4A /* NSString+AESCrypt.m in Sources */,
+				C99165F21520A660007005B6 /* AccountInformationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +320,7 @@
 				C95FDA1C1518BE920056BD4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

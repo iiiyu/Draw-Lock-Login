@@ -19,6 +19,7 @@
 @implementation ViewController
 
 @synthesize paths = _paths;
+@synthesize tipsLoginLabel = _tipsLoginLabel;
 
 - (void)viewDidLoad
 {
@@ -33,6 +34,7 @@
 
 - (void)viewDidUnload
 {
+    [self setTipsLoginLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

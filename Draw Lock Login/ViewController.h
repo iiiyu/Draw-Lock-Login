@@ -10,9 +10,11 @@
 
 @interface ViewController : UIViewController{
     NSMutableArray  *paths;
+    
 }
 
 @property (nonatomic, strong) NSMutableArray *paths;
 
+@property (weak, nonatomic) IBOutlet UILabel *tipsLoginLabel;
 
 @end
