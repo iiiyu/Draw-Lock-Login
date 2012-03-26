@@ -10,10 +10,15 @@
 
 @interface ViewController : UIViewController{
     NSMutableArray  *paths;
+    NSMutableString  *key;
+    BOOL FIRST;
     
 }
 
 @property (nonatomic, strong) NSMutableArray *paths;
+
+@property (nonatomic, strong) NSMutableString *key;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *tipsLoginLabel;
 

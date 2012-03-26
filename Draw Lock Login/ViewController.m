@@ -20,6 +20,7 @@
 
 @synthesize paths = _paths;
 @synthesize tipsLoginLabel = _tipsLoginLabel;
+@synthesize key = _key;
 
 - (void)viewDidLoad
 {
@@ -29,12 +30,26 @@
     Draw_Lock *v = (Draw_Lock *)self.view;
         [v setSubviewImageButton];
      */
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSData *dataKey = nil;
+    dataKey = [ud dataForKey:@"oh my password key"];
+    if (dataKey == nil) {
+        FIRST = YES;
+    }
+    else {
+        FIRST = NO;
+    }
+    if (self.key == nil) {
+        self.key = [[NSMutableString alloc] init];
+    }
    
 }
 
 - (void)viewDidUnload
 {
     [self setTipsLoginLabel:nil];
+    [self setKey:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -91,6 +106,38 @@
             [(UIImageView*)view setHighlighted:NO];
     
     [self.view setNeedsDisplay];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSData *dataKey = nil;
+    dataKey = [ud dataForKey:@"oh my password key"];
+    
+    if (FIRST) {
+        self.tipsLoginLabel.text = @"Please agein password";
+        for (NSNumber *tag in _paths) {
+            [self.key appendFormat:@"%02d", tag.integerValue];
+        }
+        NSLog(@"fuck:%@", self.key);
+        FIRST = NO;
+    }
+    else if(dataKey == nil){
+        NSMutableString *secondKey = [[NSMutableString alloc] init ];
+        for (NSNumber *tag in self.paths) {
+            [secondKey appendFormat:@"%02d", tag.integerValue];
+        }
+        if ([self.key isEqualToString:secondKey]) {
+            self.tipsLoginLabel.text = @"OK";
+        }
+        else {
+            FIRST = YES;
+        }
+        NSLog(@"second:%@",secondKey);
+        [self performSegueWithIdentifier:@"Password is right go to account Information" sender:self];
+        
+    }
+    else {
+        NSLog(@"%@", dataKey);
+        
+    }
     
     [_paths removeAllObjects];
 
